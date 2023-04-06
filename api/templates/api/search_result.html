@@ -1,0 +1,16 @@
+{% extends 'api/base.html' %}
+
+{% block content %}
+    {% if query %}
+        <h2>Risultati ricerca</h2>
+        {% if degrees %}
+            <ul>
+            {% for degree in degrees %}
+                <li><a href="{% url 'degree_detail' pk=degree.pk %}">{{ degree.title_degree }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nessun risultato trovato.</p>
+        {% endif %}
+    {% endif %}
+{% endblock %}

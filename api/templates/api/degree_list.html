@@ -1,0 +1,18 @@
+{% extends 'api/base.html' %}
+
+{% block content %}
+    {% for degree in degrees %}
+        <article class="degree">
+            <time class="date">
+                {{ degree.date_degree }}
+            </time>
+            <h2><a href="{% url 'degree_detail' pk=degree.pk %}">{{ degree.title_degree }}</a></h2>
+            <p>First name: {{ degree.first_name|linebreaksbr }}</p>
+            <p>Last name: {{ degree.last_name|linebreaksbr }}</p>
+            <p>Date of birth: {{ degree.date_of_birth|linebreaksbr }}</p>
+            <p>Vote: {{ degree.vote|linebreaksbr }}</p>
+            <p>Hash: {{ degree.hash|linebreaksbr }}</p>
+            <p>Transaction identifier(TxId): {{ degree.txId|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}

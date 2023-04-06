@@ -1,0 +1,90 @@
+body {
+    padding-left: 15px;
+    background-color: #a8c8fc;
+}
+h1 a, h2 a {
+    color: #C25100;
+    font-family: 'Tilt Neon', cursive;
+
+}
+.page-header {
+    background-color: #060a0e;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    font-family: 'Tilt Neon', cursive;
+}
+
+.date {
+    color: #060a0e;
+}
+
+.save {
+    float: right;
+}
+
+.degree-form textarea,
+.degree-form input {
+    width: 100%;
+}
+
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.degree {
+    margin-bottom: 70px;
+}
+
+.degree h2 a,
+.degree h2 a:visited {
+    color: #000000;
+}
+
+.degree > .date,
+.degree > .actions {
+    float: right;
+    color: #060a0e;
+}
+
+.btn-default,
+.btn-default:visited {
+    color: #060a0e;
+    background: none;
+    border-color: #060a0e;
+    float: right;
+}
+
+.btn-default:hover {
+    color: #FFFFFF;
+    background-color: #060a0e;
+}
+
+.search-box{
+     width: 50%;
+
+}
+
+
+

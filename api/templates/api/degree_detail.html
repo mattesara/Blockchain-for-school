@@ -1,0 +1,27 @@
+{% extends 'api/base.html' %}
+
+{% block content %}
+    <article class="degrees">
+        <aside class="actions">
+            {% if user.is_authenticated %}
+                <a class="btn btn-default" href="{% url 'degree_edit' pk=degree.pk %}">
+                    {% include './icons/pencil-fill.svg' %}
+                </a>
+            {% endif %}
+        </aside>
+        {% if degree.date_degree %}
+            <time class="date">
+                {{ degree.date_degree }}
+            </time>
+        {% endif %}
+        <h2>{{ degree.title_degree }}</h2>
+        <p>First name: {{ degree.first_name|linebreaksbr }}</p>
+        <p>Last name: {{ degree.last_name|linebreaksbr }}</p>
+        <p>Date of birth: {{ degree.date_of_birth|linebreaksbr }}</p>
+        <p>Vote: {{ degree.vote|linebreaksbr }}</p>
+        <p>Hash: {{ degree.hash|linebreaksbr }}</p>
+        <p>Transaction identifier(TxId): {{ degree.txId|linebreaksbr }}</p>
+        <a href="{{ link }}" target="_blank" >Show transaction in Etherscan</a>
+        <p>(The blockchain transaction makes degree unique and immutable)</p>
+    </article>
+{% endblock %}
